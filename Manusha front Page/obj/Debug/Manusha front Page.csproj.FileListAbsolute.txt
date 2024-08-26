@@ -1,0 +1,36 @@
+D:\Manusha front Page\Manusha front Page\bin\Manusha front Page.dll.config
+D:\Manusha front Page\Manusha front Page\bin\Manusha front Page.dll
+D:\Manusha front Page\Manusha front Page\bin\Manusha front Page.pdb
+D:\Manusha front Page\Manusha front Page\bin\roslyn\csc.exe
+D:\Manusha front Page\Manusha front Page\bin\roslyn\csc.exe.config
+D:\Manusha front Page\Manusha front Page\bin\roslyn\csc.rsp
+D:\Manusha front Page\Manusha front Page\bin\roslyn\csi.exe
+D:\Manusha front Page\Manusha front Page\bin\roslyn\csi.rsp
+D:\Manusha front Page\Manusha front Page\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Manusha front Page\Manusha front Page\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Manusha front Page\Manusha front Page\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Manusha front Page\Manusha front Page\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Manusha front Page\Manusha front Page\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Manusha front Page\Manusha front Page\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Manusha front Page\Manusha front Page\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Manusha front Page\Manusha front Page\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Manusha front Page\Manusha front Page\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Manusha front Page\Manusha front Page\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Manusha front Page\Manusha front Page\bin\roslyn\System.AppContext.dll
+D:\Manusha front Page\Manusha front Page\bin\roslyn\System.Collections.Immutable.dll
+D:\Manusha front Page\Manusha front Page\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Manusha front Page\Manusha front Page\bin\roslyn\System.IO.FileSystem.dll
+D:\Manusha front Page\Manusha front Page\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Manusha front Page\Manusha front Page\bin\roslyn\System.Reflection.Metadata.dll
+D:\Manusha front Page\Manusha front Page\bin\roslyn\vbc.exe
+D:\Manusha front Page\Manusha front Page\bin\roslyn\vbc.exe.config
+D:\Manusha front Page\Manusha front Page\bin\roslyn\vbc.rsp
+D:\Manusha front Page\Manusha front Page\bin\roslyn\VBCSCompiler.exe
+D:\Manusha front Page\Manusha front Page\bin\roslyn\VBCSCompiler.exe.config
+D:\Manusha front Page\Manusha front Page\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Manusha front Page\Manusha front Page\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Manusha front Page\Manusha front Page\obj\Debug\Manusha front Page.csproj.AssemblyReference.cache
+D:\Manusha front Page\Manusha front Page\obj\Debug\Manusha front Page.csproj.CoreCompileInputs.cache
+D:\Manusha front Page\Manusha front Page\obj\Debug\Manusha front Page.csproj.CopyComplete
+D:\Manusha front Page\Manusha front Page\obj\Debug\Manusha front Page.dll
+D:\Manusha front Page\Manusha front Page\obj\Debug\Manusha front Page.pdb
