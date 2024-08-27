@@ -115,31 +115,46 @@
                 font-family: Arial, sans-serif;
             }
 
-        .section2 {
-            position: relative;
-            background-image: url('Images/2nd_section.jpg');
+
+
+        /* Section 2 */
+        .section2-custom {
+            background-image: url('Assets/Images/Section%202%20Background%20Image.png');
             background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+            text-align: center;
+            padding-top: 0px;
         }
 
-            .section2::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: purple;
-                opacity: 0.96;
-                z-index: 0;
+            .section2-custom .row-custom {
+                justify-content: center; /* Center horizontally */
+                margin-left: 0;
+                margin-bottom: 30px;
+                padding-top: 20px;
             }
 
-            .section2 .container {
-                position: relative;
-                z-index: 1;
-            }
+        .h2-custom {
+            font-size: 40px;
+            line-height: 1;
+            margin-bottom: 5px;
+            font-family: Arial, sans-serif;
+        }
 
+
+        /* Image Hover Effects */
+        .image-row-custom .col-md-4-custom {
+            margin-bottom: 20px;
+            margin-left: 0px;
+        }
+
+        .hover-img-custom {
+            max-width: 60%; /* Reduce image size */
+            transition: opacity 0.3s ease-in-out;
+        }
+
+
+
+
+        /* Section 3 */
         .section3 {
             background-color: aquamarine;
         }
@@ -326,6 +341,11 @@
             .row {
                 margin-left: 10px;
             }
+
+            .h2-custom {
+                font-size: 20px;
+                line-height: 1.5;
+            }
         }
     </style>
 
@@ -358,55 +378,54 @@
 
 
     <!-- Second Section -->
-    <div class="section section2">
+    <div class="section section2-custom">
         <div class="container">
-            <div class="row">
+            <div class="row row-custom">
                 <div class="col-md-12">
-                    <h6 class="heading-with-line">Our Services</h6>
-                    <h2 style="color: #000000;">Experience our premium services 
+                    <h2 class="h2-custom" style="color: #ffffff;">Experience Our Premium Services 
                     <br />
-                        for you and your loved ones.</h2>
+                        for You and Your Loved Ones
+                    </h2>
                 </div>
             </div>
-            <div class="row mt-5 align-content-center">
-                <!-- Service Card 1 -->
-
-                <div class="card-group">
-                    <div class="card mb-4 service-card me-5" style="border-radius: 10px;">
-                        <div class="card-body d-flex flex-column align-items-start">
-                            <i class="fas fa-file-alt fa-3x mb-3"></i>
-                            <h3 class="card-title">Manage
-                                <br />
-                                My Policies</h3>
-                        </div>
-                    </div>
-
-                    <!-- Service Card 2 -->
-
-                    <div class="card mb-4 service-card  me-5" style="border-radius: 10px;">
-                        <div class="card-body d-flex flex-column align-items-start">
-                            <i class="fas fa-file-alt fa-3x mb-3"></i>
-                            <h3 class="card-title">Policy
-                                <br />
-                                Revivals</h3>
-                        </div>
-                    </div>
-
-                    <!-- Service Card 3 -->
-
-                    <div class="card mb-4 service-card" style="border-radius: 10px;">
-                        <div class="card-body d-flex flex-column align-items-start">
-                            <i class="fas fa-file-alt fa-3x mb-3"></i>
-                            <h3 class="card-title">Proposal
-                                <br />
-                                Payments</h3>
-                        </div>
-                    </div>
-
+            <div class="row mt-5 align-content-center image-row-custom" style="margin-left: 0px;">
+                <!-- Image 1 -->
+                <div class="col-md-4 col-md-4-custom">
+                    <a href="link1.html">
+                        <img src="Assets/Images/Policies.png"
+                            alt="Policies"
+                            class="hover-img-custom img-fluid"
+                            onmouseover="this.src='Assets/Images/Policies hover.png'"
+                            onmouseout="this.src='Assets/Images/Policies.png'">
+                    </a>
+                </div>
+                <!-- Image 2 -->
+                <div class="col-md-4 col-md-4-custom">
+                    <a href="link2.html">
+                        <img src="Assets/Images/revivals.png"
+                            alt="Revivals"
+                            class="hover-img-custom img-fluid"
+                            onmouseover="this.src='Assets/Images/revivals hover.png'"
+                            onmouseout="this.src='Assets/Images/revivals.png'">
+                    </a>
+                </div>
+                <!-- Image 3 -->
+                <div class="col-md-4 col-md-4-custom">
+                    <a href="link3.html">
+                        <img src="Assets/Images/payments.png"
+                            alt="Payments"
+                            class="hover-img-custom img-fluid"
+                            onmouseover="this.src='Assets/Images/payments hover.png'"
+                            onmouseout="this.src='Assets/Images/payments.png'">
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
 
     <!-- Third Section -->
     <div class="section section3">

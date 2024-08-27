@@ -68,7 +68,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Images\Home page vector.png" />
+    <Content Include="Assets\Images\payments hover.png" />
+    <Content Include="Assets\Images\payments.png" />
     <Content Include="Assets\Images\Phone.png" />
+    <Content Include="Assets\Images\Policies hover.png" />
+    <Content Include="Assets\Images\Policies.png" />
+    <Content Include="Assets\Images\revivals hover.png" />
+    <Content Include="Assets\Images\revivals.png" />
+    <Content Include="Assets\Images\Section 2 Background Image.png" />
     <Content Include="Assets\Images\slicLIfe_Logo.png" />
     <Content Include="Home Page.aspx" />
     <Content Include="Web.config" />
