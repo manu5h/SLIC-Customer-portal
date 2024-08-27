@@ -1,0 +1,347 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home Page.Master.cs" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Sri Lanka Insurance Life Customer Portal</title>
+
+    <!-- Load CSS directly -->
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/site.css" rel="stylesheet" type="text/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #DCFAFF;
+            position: relative;
+        }
+
+        /* Logo styles */
+        .logo a {
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Navbar links styles */
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+            .nav-links li {
+                display: inline-block;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                font-family: Arial;
+                color: #000000;
+                font-size: 18px;
+                padding: 5px 10px;
+                border-radius: 4px;
+                transition: background-color 0.3s ease;
+            }
+
+                /* Hover effect for links */
+                .nav-links a:hover {
+                    background-color: #1B8B95;
+                    color: #ffffff;
+                }
+
+        /* Burger Icon */
+        .burger {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            color: #000000;
+            z-index: 2;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+            .burger div {
+                width: 25px;
+                height: 3px;
+                background-color: #333;
+                border-radius: 2px;
+                transition: transform 0.3s ease;
+            }
+
+            /* Change burger icon to cross when active */
+            .burger.active div:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .burger.active div:nth-child(2) {
+                opacity: 0;
+            }
+
+            .burger.active div:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+
+        /* Responsive design for mobile devices */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                margin-top: 15px;
+                background-color: #DCFAFF;
+                padding: 10px 0;
+            }
+
+                .nav-links.active {
+                    display: flex;
+                }
+
+                .nav-links li {
+                    display: block;
+                    margin: 10px 0;
+                }
+
+            .burger {
+                display: flex;
+            }
+        }
+
+        /* Dropdown menu */
+        .dropdown-menu {
+            background-color: #E8F8FF;
+            border: none;
+        }
+
+        .dropdown-item {
+            color: #000000;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+            .dropdown-item:hover {
+                background-color: #FFD600; /* Hover effect with yellow background */
+                color: #000000;
+            }
+
+        /* Footer styles */
+        .footer {
+            background-color: #F79A79;
+            color: #000000;
+            font-size: 0.9rem;
+            position: relative;
+            border-top: 1px solid #e7e7e7;
+            padding: 60px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-color: #F79A79;
+        }
+
+            .footer::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: url('~/Images/footer.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 0.2;
+                z-index: 0;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+
+            .footer::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 5px;
+                background-color: #FFD600;
+                z-index: 1;
+            }
+
+        footer h5 {
+            color: #000000;
+        }
+
+        footer a {
+            color: #000000;
+        }
+
+            footer a:hover {
+                text-decoration: none;
+            }
+
+        footer p {
+            margin-bottom: 0;
+        }
+
+        footer ul li {
+            line-height: 1.6;
+        }
+
+        .social-icons-box {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            border: 1px solid #e7e7e7;
+            padding: 10px;
+            background-color: #FFFFFF;
+            width: 45px;
+            height: 200px;
+            border-top-left-radius: 11px;
+            border-bottom-left-radius: 11px;
+        }
+
+            .social-icons-box a {
+                margin-bottom: 8px;
+                font-size: 20px;
+            }
+
+        .phara {
+            font-weight: bold;
+        }
+
+        .footer-container {
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+            </Scripts>
+        </asp:ScriptManager>
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="Assets/Images/slicLIfe_Logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="~/Home">Home</a></li>
+                <li><a href="~/Contact">Contact Us</a></li>
+                <li><a href="About us#">About Us</a></li>
+            </ul>
+        </nav>
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <!-- Hotlines Section -->
+                        <div class="col-md-4 mb-3">
+                            <h5 style="color: #000000;"><i class="fa fa-phone"></i>Hotlines</h5>
+                            <p>office: 0112 357 827</p>
+                            <p>email@srilankainsurance.com</p>
+                        </div>
+
+                        <!-- Head Office Section -->
+                        <div class="col-md-4 mb-3">
+                            <h5 style="color: #000000;"><i class="fa fa-building" aria-hidden="true"></i>Head Office</h5>
+                            <p>
+                                Ruchira Edirisinghe<br>
+                                Brand Manager - Life<br>
+                                Sri Lanka Insurance Corporation Ltd<br>
+                                No. 21, Vauxhall Street,<br>
+                                Colombo 02.<br>
+                                Mobile: +94 778 164 324
+                            </p>
+                        </div>
+
+                        <!-- Logins Section -->
+                        <div class="col-md-4 mb-3">
+                            <h5 style="color: #000;">Logins</h5>
+                            <ul style="list-style-type: disc; padding-left: 20px;">
+                                <li>Online Payments</li>
+                                <li>Pegi Online</li>
+                                <li>E-Marine</li>
+                                <li>e-Medical</li>
+                                <li>Public Sector</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p class="phara">Copyright &copy; Sri Lanka Insurance Corporation Ltd</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Social Icons
+        <div class="social-icons-box">
+            <a href="https://www.facebook.com/srilankainsurancelife" target="_blank" class="fab fa-facebook-f"></a>
+            <a href="https://twitter.com/srilankainsure" target="_blank" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com/srilankainsurancelife/" target="_blank" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com/company/sri-lanka-insurance-life" target="_blank" class="fab fa-linkedin-in"></a>
+        </div>
+    </form>
+
+             -->
+
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+        <script>
+            // Script to toggle navigation links and burger icon on click
+            document.querySelector('.burger').addEventListener('click', function () {
+                document.querySelector('.nav-links').classList.toggle('active');
+                this.classList.toggle('active');  // Toggle active class on the burger icon
+            });
+
+        </script>
+</body>
+</html>
